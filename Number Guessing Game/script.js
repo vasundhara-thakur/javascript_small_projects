@@ -17,7 +17,7 @@ checkBtn.addEventListener("click", () => {
 
    
         if (userGuess === randomNumber){
-            message.textContent = "🎉 Correct! You guessed it right!";
+            message.textContent = `${randomNumber} is Correct! You guessed it right!`;
             checkBtn.classList.add("hidden");
             attempts.textContent = "";
             resetBtn.classList.remove("hidden");
