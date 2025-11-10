@@ -28,7 +28,7 @@ Every mini project will be simple but will help me **think logically and code be
 ---
 
 ## 🪴 My Learning Approach  
-> “I believe the best way to learn JavaScript is by building.”  
+ “I believe the best way to learn JavaScript is by building.”  
 
 So, I’ll be creating one small project at a time — starting from basics and gradually increasing complexity.  
 Each project will include:  
