@@ -20,6 +20,7 @@ checkBtn.addEventListener("click", () => {
             message.textContent = `${randomNumber} is Correct! You guessed it right!`;
             checkBtn.classList.add("hidden");
             attempts.textContent = "";
+            guessInput.disabled = true;
             resetBtn.classList.remove("hidden");
         }
         else{
@@ -31,6 +32,7 @@ checkBtn.addEventListener("click", () => {
         if(attemptsLeft <= 0){
             message.textContent = `😞 Game Over! The correct number was ${randomNumber}.`;
             attempts.textContent = "";
+            guessInput.disabled = true;
             checkBtn.disabled = false;
 
             endGame();
