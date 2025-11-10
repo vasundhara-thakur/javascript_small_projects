@@ -61,6 +61,6 @@ Frontend Developer (in progress) 💻
 ## 🚀 Live Projects
 
 | No. | Project Name | Live Demo |
-|-----|---------------|------------|--------------|
+|:-----:|:---------------|:------------|:--------------|
 | 1 | 🎯 **Number Guessing Game** | [View Live](https://vasundhara-thakur.github.io/javascript_small_projects/Number%20Guessing%20Game/) |
 | 2 | 🔁 **Palindrome Checker** | [View Live](https://vasundhara-thakur.github.io/javascript_small_projects/Palindrome%20Checker/) | 
