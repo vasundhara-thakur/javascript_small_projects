@@ -55,3 +55,9 @@ If you notice any improvement areas or have project ideas, feel free to share.
 ## ✨ Author  
 **Vasundhara Thakur**  
 Frontend Developer (in progress) 💻  
+
+---
+
+## 🚀 Live Projects
+| 1 | 🎯 **Number Guessing Game** | [View Live](https://vasundhara-thakur.github.io/javascript_small_projects/Number%20Guessing%20Game/) |  
+| 2 | 🔁 **Palindrome Checker** | [View Live](https://vasundhara-thakur.github.io/javascript_small_projects/Palindrome%20Checker/) | 
