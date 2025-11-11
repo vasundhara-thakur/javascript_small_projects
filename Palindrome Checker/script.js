@@ -8,7 +8,7 @@ document.getElementById("check-btn").addEventListener("click", () => {
 
     if(userInput === ""){
         result.textContent = "Please enter a word or phrase";
-        
+        result.style.color = "black";
     }
     else if(cleanTxt === reverseTxt){
         result.textContent = `✅ ${userInput} is a palindrome.`;
