@@ -52,7 +52,7 @@ If you notice any improvement areas or have project ideas, feel free to share.
 
 ---
 
-## ✨ Author  
+##  Author  
 **Vasundhara Thakur**  
 Frontend Developer (in progress) 💻  
 
