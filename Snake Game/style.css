@@ -1,0 +1,128 @@
+*{
+margin:0;
+padding:0;
+box-sizing: border-box;
+}
+html,body{
+width: 100%;
+height: 100%;
+}
+:root {
+    /* Colors */
+    --bg-color: #222;
+    --board-bg: #333;
+    --snake-color: #51cf56f5;
+    --food-color: #fc1717d8;
+    --text-color: #fffafaf8;
+
+    /* Sizes */
+    --cell-size: 40px;
+    --gap-size: 1px;
+    --space-xs: 8px;
+    --space-s: 16px;
+    --space-md: 24px;
+    --space-l: 32px;
+    --space-xl: 40px;
+
+    /* Border */
+    --border-prim-color: #616060;
+    --border-radius-xs: 8px;
+    --border-radius-s: 16px;
+    --border-radius-md: 24px;
+    --border-radius-l: 32px;
+    --border-radius-xl: 40px;
+
+    /* Font */
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    width: 100vw;
+    height: 100vh;
+}
+h1 {
+    margin-bottom: 10px;
+    color: var(--snake-color);
+    -webkit-text-stroke: 1px var(--text-color);
+}
+section{
+    padding: var(--space-xl);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+section #score-board {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.info{
+    padding: var(--space-xs) var(--space-s);
+    border: 1px solid var(--border-prim-color);
+    border-radius: var(--border-radius-xs);
+}
+
+#board {
+    width: 80vw;
+    height: 80vh;
+    border: 2px solid var(--border-prim-color);
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(40px, 1fr));
+}
+
+.block{
+    width: var(--cell-size);
+    height: var(--cell-size);
+    border-radius: 50%;
+}
+
+.modal {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    background-color: #35353587;
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal .start-game, .modal .game-over {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.modal .game-over{
+      display: none; 
+}
+.btns{
+    padding: var(--space-xs) var(--space-xl);
+    border: none;
+    border-radius: var(--border-radius-s);
+    background-color: var(--snake-color);
+    color: var(--text-color);
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.snake {
+    background-color: var(--snake-color);
+}
+
+.food {
+    background-color: var(--food-color);
+}
