@@ -12,7 +12,7 @@ html, body {
 /* MAIN BACKGROUND */
 #main {
   font-family: Arial, sans-serif;
-  background-color: #046574d7; /* soft cool grey */
+  background-color: #046574d7; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,7 +24,7 @@ html, body {
 #panel {
   height: 80%;
   width: 80%;
-  background-color: #fdfdfd; /* white with slight warm tone */
+  background-color: #fdfdfd;
   border-radius: 12px;
   overflow: hidden;
   display: flex;
@@ -37,14 +37,14 @@ html, body {
   padding: 0 20px;
   width: 100%;
   height: 80px;
-  background: #3a635f; /* very soft baby blue */
+  background: #3a635f; 
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 
 .elem h3 {
-  color: #ffffff; /* dark muted blue */
+  color: #ffffff;
   margin-bottom: 5px;
   font-weight: 600;
 }
@@ -66,7 +66,7 @@ html, body {
 #pbtm {
   width: 100%;
   height: calc(100% - 80px);
-  background:  radial-gradient(#aacfd0, #26afbe); /* soft light blue-grey */
+  background:  radial-gradient(#aacfd0, #26afbe); 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -87,7 +87,7 @@ html, body {
 /* START BUTTON */
 #start {
   font-size: 2rem;
-  background: #3a635f; /* soft sage green */
+  background: #3a635f;
   border-radius: 10px;
   padding: 15px 30px;
   border: none;
@@ -100,7 +100,7 @@ html, body {
 }
 
 #start:hover {
-  background: #274240dc; /* very soft, darker sage */
+  background: #274240dc;
   transform: scale(1.05);
 }
 
@@ -110,7 +110,7 @@ html, body {
   width: 55px;
   height: 55px;
   border-radius: 50%;
-  background: radial-gradient(circle at top left, #d7f0f3, #aacfd0); /* soft pastel blue sphere */
+  background: radial-gradient(circle at top left, #d7f0f3, #aacfd0);
   color: #0d1216;
   display: flex;
   align-items: center;
@@ -136,7 +136,7 @@ html, body {
   text-align: center;
   height: 100%;
   color: #2f3c48;
-  background: linear-gradient(135deg, #cfdde2, #b7cdd5); /* ultra soft blue gradient */
+  background: linear-gradient(135deg, #cfdde2, #b7cdd5); 
   border-radius: 15px;
   padding: 30px;
   animation: fadeIn 1s ease-in-out;
@@ -164,7 +164,7 @@ html, body {
   margin-top: 20px;
   padding: 12px 24px;
   border: none;
-  background: #3a635f; /* soft sage */
+  background: #3a635f;
   color: #ffffff;
   font-size: 1rem;
   border-radius: 10px;
