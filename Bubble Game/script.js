@@ -26,6 +26,12 @@ function createBubbles() {
 
   gameArea.appendChild(bubble);
 
+  bubble.addEventListener("touchstart", () => {
+    bubble.remove();
+    score++;
+    scoreBox.textContent = score;
+  });
+
   // Bubble timeout (skip count)
   setTimeout(() => {
     if (bubble.parentElement) {
