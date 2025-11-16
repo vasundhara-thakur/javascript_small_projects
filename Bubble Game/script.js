@@ -26,12 +26,6 @@ function createBubbles() {
 
   gameArea.appendChild(bubble);
 
-  bubble.addEventListener("touchstart", () => {
-    bubble.remove();
-    score++;
-    scoreBox.textContent = score;
-  });
-
   // Bubble timeout (skip count)
   setTimeout(() => {
     if (bubble.parentElement) {
@@ -84,6 +78,15 @@ document.addEventListener("keydown", (e) => {
     }
   }
 });
+
+document.addEventListener("touchstart", (e) => {
+  if (e.target.classList.contains("bubbles")) {
+    e.preventDefault();
+    e.target.remove();
+    score++;
+    scoreBox.textContent = score;
+  }
+}, { passive: false });
 
 function exitGame() {
   gameArea.innerHTML = `
