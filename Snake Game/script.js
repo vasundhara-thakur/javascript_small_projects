@@ -56,7 +56,7 @@ function render(){
         head = { x: snake[0].x + 1, y: snake[0].y};
     }
     
-    // wall logic
+    // collision logic
     if (head.x < 0 || head.x >= rows || head.y < 0 || head.y >= cols){
         
        clearInterval(intervalId);
@@ -66,6 +66,19 @@ function render(){
        gameOver.style.display = "flex";
        return;
     }
+
+    for (let i = 0; i < snake.length; i++) {
+    if (head.x === snake[i].x && head.y === snake[i].y) {
+        clearInterval(intervalId);
+        clearInterval(timerIntervalId);
+
+        model.style.display = "flex";
+        gameStart.style.display = "none";
+        gameOver.style.display = "flex";
+
+        return;
+    }
+}
     
     // food logic
     if (head.x == food.x && head.y == food.y){
@@ -146,13 +159,13 @@ function resetGame() {
 }
 
 addEventListener("keydown", (event) => {
-    if (event.key === "ArrowLeft"){
+    if (event.key === "ArrowLeft" && direction !== "right"){
         direction = "left"; 
-    } else if (event.key === "ArrowRight"){
+    } else if (event.key === "ArrowRight" && direction !== "left"){
         direction = "right"; 
-    } else if (event.key === "ArrowUp"){
+    } else if (event.key === "ArrowUp" && direction !== "down"){
         direction = "up"; 
-    } else if (event.key === "ArrowDown"){
+    } else if (event.key === "ArrowDown" && direction !== "up"){
         direction = "down"; 
     }
 });
