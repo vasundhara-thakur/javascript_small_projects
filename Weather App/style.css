@@ -1,0 +1,137 @@
+*{
+margin:0;
+padding:0;
+box-sizing: border-box;
+}
+
+html,body{
+width: 100%;
+height: 100%;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, rgb(247, 247, 120), rgb(250, 136, 60));
+    font-family: "Poppins", sans-serif;
+    overflow: hidden;
+}
+.sun {
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(yellow, orange,red);
+  box-shadow: 0 5px 60px rgb(255, 68, 0);
+  border-radius: 50%;
+  position: absolute;
+  top: 40px;
+  left: 100px;
+}
+
+.dark{
+    background: linear-gradient(135deg, rgb(75, 74, 74), rgb(8, 8, 8));
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    width: 60vw;
+    padding: 20px;
+    background-color: #fff5f26c;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #222222;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+ .search-box input {
+    padding: 10px;
+    border: 2px solid #222222;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.search-box button {
+    padding: 10px 20px;
+    background-color: #e63946;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-box button:hover {
+    background-color: #b02c38;
+}
+
+#loading {
+    display: none;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(to right, #8f0510, rgb(247, 117, 117));
+    border-radius: 5px; 
+    position: relative;        
+    margin-bottom: 10px;
+}
+
+#error {
+    color: #d90404ff;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.weather-card {
+    width: inherit;
+    text-align: center;
+    line-height: 2;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f1d8cbec;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.weather-card h2 {
+    margin-bottom: 10px;
+    color: #e63946;
+    font-size: 25px;
+}
+
+@media (max-width: 500px) {
+    .weather-card {
+        padding: 20px;
+        min-width: 100px;
+    }
+    .search-box {
+        flex-direction: column;
+        padding: 20px;
+        width: inherit;
+    }
+}
+
