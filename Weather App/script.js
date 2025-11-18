@@ -24,7 +24,7 @@ async function weatherFatch(city) {
 async function searchWeather() {
     const city = cityInputEL.value.trim();
 
-    if (city === "") {
+    if (city === "" || !isNaN(city)) {
         errorEl.classList.remove("hidden");
         errorEl.textContent = "Please enter a city";
         return;
