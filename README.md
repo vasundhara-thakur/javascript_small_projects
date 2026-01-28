@@ -65,4 +65,5 @@ Frontend Developer (in progress) 💻
 | 4 | **Simple Calculator** | [View Live](https://vasundhara-thakur.github.io/javascript_small_projects/Simple%20Calculator/) |  
 | 5 | **Snake Game** | [view Live](https://vasundhara-thakur.github.io/javascript_small_projects/Snake%20Game/) |  
 | 6 | **Bubble Game** | [View Live](https://vasundhara-thakur.github.io/javascript_small_projects/Bubble%20Game/) |  
-| 7 | **Weather App** | [View Live](https://vasundhara-thakur.github.io/javascript_small_projects/Weather%20App/) |
+| 7 | **Weather App** | [View Live](https://vasundhara-thakur.github.io/javascript_small_projects/Weather%20App/) |  
+| 8 | **Heart Trail** | [View Live](https://vasundhara-thakur.github.io/javascript_small_projects/heart-trail-animation/) |
