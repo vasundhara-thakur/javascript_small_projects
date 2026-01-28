@@ -27,11 +27,9 @@ span{
     0%{
         transform: translate(-50%, -50%);
         opacity: 1;
-        filter: hue-rotate(0);
     }
     100%{
         transform: translate(-50%, -500%);
         opacity: 0;
-        /* filter: hue-rotate(720); */
     }
 }
