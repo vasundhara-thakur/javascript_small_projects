@@ -4,24 +4,33 @@ let loadingEl = document.querySelector('#loading');
 let errorEl = document.querySelector('#error');
 let weatherCardEl = document.querySelector('.weather-card');
 let cityNameEl = document.querySelector('#cityName');
+let countryEl = document.querySelector('#country');
 let tempEl = document.querySelector('#temp');
 let humidityEl = document.querySelector('#humidity');
 let conditionEl = document.querySelector('#condition');
 let sunEl = document.querySelector('.sun');
 
-async function weatherFatch(city) {
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=bee21bcb40eee19046561a80dda06f75&units=metric`;
+async function weatherFetch(city) {
+    const myKey = "bee21bcb40eee19046561a80dda06f75";
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${myKey}&units=metric`;
+
     try {
         const response = await fetch(apiUrl);
         const data = await response.json();
+
+        if (!response.ok) {
+            return { error: true };
+        }
+
         return { response, data };
-    } catch (error) {
-        console.log("Error fetching API", error);
+
+    } catch (err) {
+        return { error: true };
     }
 }
 
-
 async function searchWeather() {
+    
     const city = cityInputEL.value.trim();
 
     if (city === "" || !isNaN(city)) {
@@ -29,7 +38,6 @@ async function searchWeather() {
         errorEl.textContent = "Please enter a city";
         return;
     }
-
 
     loadingEl.style.display = "inline-block";
     errorEl.textContent = "";
@@ -42,38 +50,37 @@ async function searchWeather() {
         ease: "linear"
     });
 
-    const { response, data } = await weatherFatch(city);
+    const { response, data } = await weatherFetch(city);
+    console.log(data)
 
     loadingAnim.kill();
     loadingEl.style.display = "none";
 
-    if (!response.ok) {
+    /* ✅ Only correction: Proper error handling */
+    if (!data || data.cod != 200) {
         errorEl.classList.remove("hidden");
-        errorEl.textContent = "City not found";
+        errorEl.textContent = `${city} is not a city name`;
         return;
     }
 
+    if (data.name.toLowerCase() !== city.toLowerCase()) {
+    errorEl.classList.remove("hidden");
+    errorEl.textContent = `${city} is not a valid city`;
+    return;
+}
+    /* ✅ End correction */
+
     weatherCardEl.classList.remove("hidden");
     cityNameEl.textContent = `City: ${data.name}`;
+    countryEl.textContent = `${data.sys.country}`
     tempEl.textContent = `${data.main.temp}`;
     humidityEl.textContent = `${data.main.humidity}`;
     conditionEl.textContent = `${data.weather[0].description}`;
     cityInputEL.value = "";
 
-    gsap.fromTo(weatherCardEl,
-        { opacity: 0, y: 50 },
-        { opacity: 1, y: 0, duration: 1, ease: "power2.out" }
-    );
-
-    gsap.fromTo(tempEl,
-        { scale: 0 },
-        { scale: 1, duration: 0.5, ease: "back.out(1.7)" }
-    );
-
-    gsap.fromTo(conditionEl,
-        { opacity: 0 },
-        { opacity: 1, duration: 1, delay: 0.5 }
-    );
+    gsap.fromTo(weatherCardEl, { opacity: 0, y: 50 },{ opacity: 1, y: 0, duration: 1, ease: "power2.out" });
+    gsap.fromTo(tempEl,{ scale: 0 },{ scale: 1, duration: 0.5, ease: "back.out(1.7)" });
+    gsap.fromTo(conditionEl, { opacity: 0 },{ opacity: 1, duration: 1, delay: 0.5 });
 
     gsap.to(".sun", {
         y: 20,
